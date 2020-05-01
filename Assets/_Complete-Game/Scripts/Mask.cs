@@ -17,7 +17,7 @@ public class Mask : MonoBehaviour
     {
         if (scale > 25)
         {
-            scale -= 0.06f;
+            scale -= 0.1f;
             transform.localScale = new Vector3(scale, scale, scale);
         }
     }
