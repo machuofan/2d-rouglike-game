@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Mask : MonoBehaviour
 {
-    public float scale = 120f;
+    public float scale = 220f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,7 +17,7 @@ public class Mask : MonoBehaviour
     {
         if (scale > 25)
         {
-            scale -= 0.1f;
+            scale -= 0.06f;
             transform.localScale = new Vector3(scale, scale, scale);
         }
     }
