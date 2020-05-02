@@ -131,6 +131,9 @@ namespace Completed
 		//SetupScene initializes our level and calls the previous functions to lay out the game board
 		public void SetupScene (int level)
 		{
+			//reset resource count and wall count according to game level
+			foodCount = new Count(Math.Max(7-level, 3), 7);
+			wallCount = new Count(Math.Max(20+level*2,40), Math.Min(50+level*2,70));
 			//Creates the outer walls and floor.
 			BoardSetup ();
 			
@@ -144,7 +147,7 @@ namespace Completed
 			LayoutObjectAtRandom (foodTiles, foodCount.minimum, foodCount.maximum);
 			
 			//Determine number of enemies based on current level number, based on a logarithmic progression
-			int enemyCount = (int)Mathf.Log(level, 2f);
+			int enemyCount = Math.Min((int)Mathf.Log(level, 1.7f), 6);
 			
 			//Instantiate a random number of enemies based on minimum and maximum, at randomized positions.
 			LayoutObjectAtRandom (enemyTiles, enemyCount, enemyCount);
