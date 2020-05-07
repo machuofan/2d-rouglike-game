@@ -9,19 +9,18 @@ namespace Completed
 	
 	public class GameManager : MonoBehaviour
 	{
-		public SpriteMask mask;
 		public float levelStartDelay = 2f;						//Time to wait before starting level, in seconds.
 		public float turnDelay = 0.1f;							//Delay between each Player turn.
 		public int playerFoodPoints = 100;						//Starting value for Player food points.
 		public static GameManager instance = null;				//Static instance of GameManager which allows it to be accessed by any other script.
 		[HideInInspector] public bool playersTurn = true;       //Boolean to check if it's players turn, hidden in inspector but public.
 		public float scale = 120f;
-		public float maskDelay = 0.5f;
+		
 
 
 		private Text levelText;									//Text to display current level number.
 		private GameObject levelImage;							//Image to block out level as levels are being set up, background for levelText.
-		private BoardManager boardScript;						//Store a reference to our BoardManager which will set up the level.
+		private BoardManager boardScript;                       //Store a reference to our BoardManager which will set up the level.
 		private int level = 1;									//Current level number, expressed in game as "Day 1".
 		private List<Enemy> enemies;							//List of all Enemy units, used to issue them move commands.
 		private bool enemiesMoving;								//Boolean to check if enemies are moving.
@@ -83,7 +82,7 @@ namespace Completed
 
 			//Get a reference to our image LevelImage by finding it by name.
 			levelImage = GameObject.Find("LevelImage");
-			
+
 			//Get a reference to our text LevelText's text component by finding it by name and calling GetComponent.
 			levelText = GameObject.Find("LevelText").GetComponent<Text>();
 			
@@ -117,18 +116,6 @@ namespace Completed
 		//Update is called every frame.
 		void Update()
 		{
-            //if (doingSetup)
-            //{
-            //    if (scale > 35f)
-            //    {
-            //        scale -= 0.5f;
-            //        mask.transform.localScale = new Vector3(scale, scale, scale);
-            //    }
-            //    else
-            //    {
-            //        doingSetup = false;
-            //    }
-            //}
             //Check that playersTurn or enemiesMoving or doingSetup are not currently true.
             if (playersTurn || enemiesMoving || doingSetup)
 				
