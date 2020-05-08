@@ -6,7 +6,6 @@ using UnityEngine.SceneManagement;
 public class ExitHelp : MonoBehaviour
 {
     public GameObject HelpUI;
-    public GameObject PauseMenuUI;
 
     void Start()
     {
