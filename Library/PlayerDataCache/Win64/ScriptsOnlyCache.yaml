@@ -504,12 +504,6 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 58e68364412c67eae2bdb4954be2dcc2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Readme
-  - hash:
-      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -562,12 +556,6 @@ ScriptsOnlyBuild:
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PauseMenu
-  - hash:
-      serializedVersion: 2
-      Hash: fcb02fac7f8163d9efda79449cd757e1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: TutorialInfo
   - hash:
       serializedVersion: 2
       Hash: 1602e9a4c55ee4ee453338d13c599376
