@@ -16,4 +16,9 @@ public class StartPlay : MonoBehaviour
     {
         HelpUI.SetActive(true);
     }
+
+    public void Quit()
+    {
+        Application.Quit();
+    }
 }
